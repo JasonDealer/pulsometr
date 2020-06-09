@@ -4,10 +4,31 @@
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
 
+@font-face{
+
+    font-family: 'Museo Sans Cyrl';
+    
+    src: url('../fonts/MuseoSansCyrl-300.eot');
+    
+    src: url('../fonts/MuseoSansCyrl-300.eot?iefix') format('eot'),
+    
+    url('../fonts/MuseoSansCyrl-300.woff') format('woff'),
+    
+    url('../fonts/MuseoSansCyrl-300.ttf') format('truetype');
+    
+    font-weight: 300 400 500 600 700;
+      }
+
 .container{
     max-width: 950px;
     margin: 0 auto;
 }
+
+.review {
+    border-color: #c70101;
+}
+
+
 @import "blocks/promo";
 @import "blocks/header";
 @import "blocks/button";
@@ -16,3 +37,11 @@
 @import "blocks/titles";
 @import "blocks/forms";
 @import "blocks/slider";
+@import "blocks/catalog";
+@import "blocks/reviews";
+@import "blocks/footer";
+@import "blocks/modal";
+
+.title_black{
+    color:rgb(0, 0, 0);
+}
