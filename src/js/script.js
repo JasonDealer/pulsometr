@@ -10,8 +10,8 @@ $(document).ready(function(){
         autoplaySpeed: 4000,
        	// fade: true,
        	// cssEase: 'linear'
-    	prevArrow: '<button type="button" class="slick-prev"><img src="../icons/chevron-left-solid.png"></button>',
-    	nextArrow: '<button type="button" class="slick-next"><img src="../icons/chevron-right-solid.png"></button>',
+    	prevArrow: '<button type="button" class="slick-prev"><img src="../icons/left.png"></button>',
+    	nextArrow: '<button type="button" class="slick-next"><img src="../icons/right.png"></button>',
     	responsive: [
     		{
 			breakpoint: 992,
@@ -114,5 +114,24 @@ $(document).ready(function(){
 //masked input
 
 	$("input[name=phone]").mask("+375 (99) 999-99-99");
+
+//backend
+
+	$('form').submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "mailer/smart.php",
+			data: $(this).serialize()
+		}).done(function(){
+			$(this).find("input").val("");
+			$('.overlay, #consultation, #order, #confirm').fadeOut();
+			$('.overlay, #confirm').fadeIn();
+
+
+			$('form').trigger('reset');
+		});
+		return false;
+	});
 
 });     
