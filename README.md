@@ -1,3 +1,3 @@
 # pulsometr
 
-Баг со стрелками слайдера, есть в файлах на гитхабе при заливе на хостинг исчезают
+bug with displaying of slider buttons on GH pages
